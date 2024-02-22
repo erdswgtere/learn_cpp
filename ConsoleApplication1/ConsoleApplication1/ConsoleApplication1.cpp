@@ -11,11 +11,11 @@ int main()
     locale::global(locale("ru_RU.UTF-8"));
     wstring full_name;
     wstring group;
-    wcout << L"Введите группу: ";
+    wcout << "Введите группу: ";
     wcin >> group;
-    wcout << L"Введите полное имя: ";
+    wcout << "Введите полное имя: ";
     wcin >> full_name;
-    wcout << L"Привет меня зовут " << full_name << L"\nЯ студент " << group << L" группы";
+    wcout << "Привет меня зовут " << full_name << L"\nЯ студент " << group << L" группы";
     
 }
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
