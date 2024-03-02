@@ -16,7 +16,7 @@ private:
 		return (double)Y / Mn;
 	}
 public:
-	void Fill(int arr[][n], const int n) { // функция заполнения и вывода массива (поменяв тип данных массива можно получить дробную часть)
+	void Fill(int arr[][n]) { // функция заполнения и вывода массива (поменяв тип данных массива можно получить дробную часть)
 		for (int i = 0; i < n; i++) {
 			cout << "| "; // для красоты линии
 			for (int j = 0; j < n; j++) {
@@ -26,7 +26,7 @@ public:
 			cout << " |" << endl; // для красоты линии
 		}
 	}
-	static int Min(int arr[][n], const int n) { // функция нахождения минимального элемента в массиве
+	static int Min(int arr[][n]) { // функция нахождения минимального элемента в массиве
 		int min = arr[0][0];
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
@@ -37,7 +37,7 @@ public:
 		}
 		return min;
 	}
-	static int Max(int arr[][n], const int n) { // функция нахождения максимального элемента в массиве
+	static int Max(int arr[][n]) { // функция нахождения максимального элемента в массиве
 		int max = arr[0][0];
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
@@ -55,8 +55,8 @@ int main() { // основная программа
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	int mas[n][n] = {};
-	rnd1.Fill(mas, n);
-	cout << "Максимальный элемент массива: " << rnd1.Max(mas, n) << endl;
-	cout << "Минимальный элемент массива: " << rnd1.Min(mas, n);
+	rnd1.Fill(mas);
+	cout << "Максимальный элемент массива: " << rnd1.Max(mas) << endl;
+	cout << "Минимальный элемент массива: " << rnd1.Min(mas);
 	cout << endl;
 }
